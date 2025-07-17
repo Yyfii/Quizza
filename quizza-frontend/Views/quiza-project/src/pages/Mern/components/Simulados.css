@@ -1,0 +1,154 @@
+.section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f4f4f5;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.expanded {
+  max-height: 1000px;
+}
+
+.top-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e293b;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #374151;
+  text-align: left;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+  max-height: 140px;
+}
+
+.card-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 6px;
+}
+
+.card_desc{
+    display: flex;
+    justify-content: space-between;
+}
+.card_desc .card_item{
+    font-size: 11px;
+    color: #5e5e5e;
+}
+
+
+.card_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card_tags .card_item {
+  font-size: 12px;
+  background-color: #374151a9;
+  border-radius: 15px;
+  padding: 4px 10px;
+  white-space: nowrap;
+  color: #e9eaeb;
+}
+
+.btn-toggle {
+  background: none;
+  color: #6366f1;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  padding: 0;
+}
+
+.btn-toggle:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Botão menor */
+.btn-list {
+  background: linear-gradient(to right, #6366f1, #4f46e5);
+  flex: 0.2;
+}
+
+.btn-list:hover {
+  background: linear-gradient(to right, #4f46e5, #4338ca);
+}
+
+/* Botão maior */
+.btn-simulado {
+  background: linear-gradient(to right, #6366f1, #4f46e5);
+  flex: 0.8;
+}
+
+.btn-simulado:hover {
+  background: linear-gradient(to right, #4f46e5, #4338ca);
+}

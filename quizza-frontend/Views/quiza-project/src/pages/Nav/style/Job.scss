@@ -1,0 +1,191 @@
+body.about-bg {
+  background: linear-gradient(to bottom right, #cbd5f7, #6366f1);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #cbd5e1; /* texto claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.jobs {
+  max-width: 1100px;
+  margin: 2rem auto 4rem auto;
+  padding: 1rem;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* Cabeçalho das vagas */
+.jobs .lista {
+  background: rgba(51, 58, 92, 0.85);
+  border-radius: 15px;
+  padding: 20px 1.5rem;
+  box-shadow: 0 0 15px rgba(67, 56, 202, 0.7);
+  margin-bottom: 2.5rem;
+}
+
+.jobs .lista h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #e0e7ff;
+}
+
+.jobs .lista p {
+  font-size: 1rem;
+  color: #cbd5f7;
+}
+/* Container da search-bar */
+.jobs .search-bar-container {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cards container */
+.jobs .card-list {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  justify-content: center;
+}
+
+/* Cada card */
+.jobs .card-item .card-link {
+  display: block;
+  width: 400px;
+  
+  border-radius: 15px;
+  padding: 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.jobs .card-item .card-link:hover {
+  border-color: #6366f1;
+  background: rgba(79, 70, 229, 0.1);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Imagem do card */
+.jobs .card-item .card-link .card-image {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(67, 56, 202, 0.5);
+}
+
+/* Badge do card */
+.jobs .card-item .card-link .badge {
+  display: inline-block;
+  background: #4338ca;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #e0e7ff;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(67, 56, 202, 0.8);
+}
+
+/* Título da vaga */
+.jobs .card-item .card-link .card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #e0e7ff;
+}
+
+/* Subtítulos */
+.jobs .card-item .card-link .card-subtitles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.jobs .card-item .card-link .card-subtitle {
+  background: #4f46e5;
+  padding: 7px 20px;
+  border-radius: 50px;
+  color: #e0e7ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
+}
+
+/* Botão do card */
+.jobs .card-item .card-link .card-button {
+  margin: 25px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #6366f1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #a5b4fc;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: rotate(-45deg);
+}
+
+.jobs .card-item .card-link:hover .card-button {
+  background: #6366f1;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.9);
+}
+
+/* Swiper navegação */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #a5b4fc;
+  filter: drop-shadow(0 0 2px #4338ca);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  background: #a5b4fc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .jobs .card-item .card-link {
+    width: 90vw;
+  }
+
+  .jobs .card-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .swiper-slide {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs .search-bar-container {
+    padding: 0 1rem;
+  }
+
+  .jobs .lista h2 {
+    font-size: 1.5rem;
+  }
+
+  .jobs .lista p {
+    font-size: 0.95rem;
+  }
+}

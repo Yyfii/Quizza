@@ -1,0 +1,41 @@
+{
+    "jobs":[
+        {
+            "id": 1,
+            "title": "Sr. React Developer",
+            "salary": 50000,
+            "location": "London UK"
+        },
+        {
+            "id": 2,
+            "title": "Sr. Python Developer",
+            "salary": 60000,
+            "location": "London UK"
+        },
+                {
+            "id": 3,
+            "title": "Jr. React Developer",
+            "salary": 20000,
+            "location": "London UK"
+        },
+                {
+            "id": 4,
+            "title": "Jr. Data Scientist",
+            "salary": 50000,
+            "location": "London UK"
+        },
+                {
+            "id": 5,
+            "title": "Sr. Java Developer",
+            "salary": 50000,
+            "location": "London UK"
+        }
+        ,
+                {
+            "id": 6,
+            "title": "Jr. UX Design",
+            "salary": 50000,
+            "location": "London UK"
+        }
+    ]
+}
