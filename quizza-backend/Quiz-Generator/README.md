@@ -44,3 +44,5 @@ python app.py
 ```csharp
  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 ```
+
+## Não esqueça de iniciar os outros servidores (forntend e backend node)
