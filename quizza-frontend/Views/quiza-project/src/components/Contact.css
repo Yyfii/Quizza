@@ -1,0 +1,124 @@
+.form-contact,
+.Info {
+  min-height: 220px;
+  height: auto;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #0f172a; /* bg-slate-900 */
+  border: 1px solid #334155;
+  color: #c7d2fe; /* indigo-200 */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Título */
+.form-contact h2,
+.Info h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Inputs */
+.form-contact input{
+  width: 80%;
+  display: block;
+  margin: 0.5rem auto;
+  border: none;
+  border-bottom: 1px solid #3468e0; /* slate-400 */
+  background-color: transparent;
+  color: #cbd5e1; /* slate-200 */
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.form-contact textarea {
+  width: 80%;
+  display: block;
+  margin: 0.5rem auto;
+  border: none;
+  border-bottom: 1px solid #3468e0;
+  background-color: transparent;
+  color: #cbd5e1;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  resize: none;
+  overflow-y: auto;
+  max-height: 100px;
+}
+
+/* Estilo do autofill corrigido */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Textarea */
+.form-contact textarea {
+  resize: vertical;
+  height: 120px;
+  padding-left: 10px;
+}
+
+
+/* Botão */
+.form-contact button {
+  margin-top: 1rem;
+  padding: 12px 25px;
+  background-color: #1e293b; /* slate-800 */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-contact button:hover {
+   background: linear-gradient(to right, #818cf8, #1e40af); /* hover mais claro */
+   box-shadow: 0 0 15px rgba(129, 140, 248, 0.6);
+}
+
+/* Bloco de informações */
+.Info div {
+  margin-bottom: 12px;
+  padding: 5px 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.Info div span {
+  display: block;
+  font-weight: normal;
+  border-bottom: 1px solid #3468e0;
+  margin-top: 4px;
+  padding-bottom: 4px;
+  color: #cbd5e1;
+}
+
+.span {
+  display: block;
+  height: 4px;
+  width: 80px;
+  margin: 0 auto 2rem;
+  background-color: #3468e0;
+  border-radius: 5px;
+}
+/* Responsividade */
+@media (max-width: 821px) {
+  .Form,
+  .form-contact,
+  .Info {
+    width: 85%;
+    margin: 0 auto;
+  }
+}

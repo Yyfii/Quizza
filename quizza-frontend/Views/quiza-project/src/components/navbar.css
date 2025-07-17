@@ -1,0 +1,119 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: #0f172a; /* fundo escuro estilo tailwind slate-900 */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar img {
+  width: 220px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Botão */
+.navbar button {
+  background: linear-gradient(to right, #6366f1, #312e81); /* from-indigo-500 to-indigo-900 */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 9999px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 10px #6366f1;
+}
+
+/* Menu hamburguer */
+.navbar .menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.navbar .menu span {
+  height: 0.3rem;
+  width: 100%;
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  border-radius: 0.2rem;
+}
+
+/* Lista de links */
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  background: #1e293b; /* slate-800 */
+  padding: 10px 30px;
+  border-radius: 9999px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.navbar ul li {
+  color: #e0e7ff; /* indigo-100 */
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li:hover,
+.navbar a.active li {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  color: white;
+  text-shadow: 0 0 5px #60a5fa;
+}
+
+/* Estilo responsivo */
+@media (max-width: 1182px) {
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar .menu {
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    background: #1e293b;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 12px;
+  }
+
+  .navbar button {
+    display: none;
+  }
+
+  .navbar.menu-open button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

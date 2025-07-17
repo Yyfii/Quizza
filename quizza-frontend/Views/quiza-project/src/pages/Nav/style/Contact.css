@@ -1,0 +1,109 @@
+.Contact {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #1e293b, #0f172a); /* slate-800 -> slate-900 */
+  color: #cbd5e1; /* slate-200 */
+  min-height: 90vh;
+  text-align: center;
+}
+
+.title-page {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.span {
+  display: block;
+  height: 4px;
+  width: 80px;
+  margin: 0 auto 2rem;
+  background-color: #6366f1;
+  border-radius: 5px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-buttons .card {
+  background-color: #0f172a;
+  color: #f1f5f9; /* texto mais claro */
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(136, 223, 242, 0.1);
+  width: 340px;
+  max-width: 90vw;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(136, 223, 242, 0.4);
+}
+
+
+.title-card {
+  display: flex;
+  flex-direction: column; /* coloca imagem acima do h1 */
+  align-items: center;     /* centraliza horizontalmente */
+  justify-content: center; /* opcional: centraliza verticalmente */
+  gap: 0.5rem;             /* espaço entre a imagem e o título */
+  margin-bottom: 1rem;
+}
+
+.title-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  /* Remova o border vermelho se não quiser depurar */
+}
+
+.title-card h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  /* Remova o border vermelho se não quiser depurar */
+  width: 100%;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cbd5e1; /* texto de parágrafo um pouco mais suave */
+}
+
+
+.card button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #6366f1, #1e3a8a); /* indigo-500 to indigo-900 */
+  color: white;
+  border: none;
+  border-radius: 9999px; /* full rounded */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  background: linear-gradient(to right, #818cf8, #1e40af); /* hover mais claro */
+  box-shadow: 0 0 15px rgba(129, 140, 248, 0.6);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

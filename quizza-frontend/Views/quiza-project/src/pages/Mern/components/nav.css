@@ -1,0 +1,5 @@
+@import "tailwindcss";
+.Header button,
+.Nav button{
+    cursor: pointer;
+}
