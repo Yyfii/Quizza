@@ -35,7 +35,7 @@ git clone https://github.com/Yyfii/Quizza.git
 cd Quizza
 ```
 
-# 📦 2. Iniciar o Backend Node
+### 📦 2. Iniciar o Backend Node
 
 - Configure o backend-node/.env
 
@@ -66,7 +66,7 @@ node --watch server.js
 
 ```
 
-🧪 3. Iniciar o Gerador de Questões (Python + Flask)
+### 🧪 3. Iniciar o Gerador de Questões (Python + Flask)
 
 - Configure o Quiz-Generator/.env
 
@@ -96,7 +96,7 @@ echo OPEN_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx > .env
 python app.py
 ```
 
-💻 4. Iniciar o Frontend (React)
+### 💻 4. Iniciar o Frontend (React)
 
 ```bash
 
@@ -106,7 +106,7 @@ npm run dev
 
 ```
 
-✨ Funcionalidades
+#### ✨ Funcionalidades
 
 - Autenticação de usuários com JWT
 
@@ -120,7 +120,8 @@ npm run dev
 
 - Histórico de respostas
 
-📌 Observações
+#### 📌 Observações
+
 O projeto requer uma chave de API da OpenRouter para funcionar corretamente o gerador de questões.
 
 O backend Node se conecta a um banco MongoDB – configure a string de conexão no seu .env (não incluído por segurança).
