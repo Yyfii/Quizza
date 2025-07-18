@@ -17,6 +17,8 @@ const HistoricoRespostas = () => {
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(null);
 
+  const API_BASE_URL = import.meta.env.VITE_API;
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -61,7 +63,7 @@ const HistoricoRespostas = () => {
   const excluirTentativa = async (respostaId) => {
     try {
       await axios.delete(
-        `http://localhost:4000/api/respostas/${respostaId}`,
+        `${API_BASE_URL}/respostas/${respostaId}`,
         { withCredentials: true }
       );
       toast.success("Tentativa excluída com sucesso!");

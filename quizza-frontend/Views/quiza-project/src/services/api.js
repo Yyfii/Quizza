@@ -1,8 +1,10 @@
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API;
+console.log("API URL:", API_BASE_URL); 
 // Create a connection with both frontend and backend
 const api = axios.create({
-  baseURL: 'http://localhost:4000/api', // Points to your backend
+  baseURL: API_BASE_URL, // Points to your backend
   withCredentials: true // For cookies/auth
 });
 

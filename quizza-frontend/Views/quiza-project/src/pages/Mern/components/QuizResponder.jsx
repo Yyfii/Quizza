@@ -11,12 +11,13 @@ const QuizResponder = () => {
   const [respostas, setRespostas] = useState({});
   const [enviado, setEnviado] = useState(false);
   const [acertos, setAcertos] = useState(0);
+  const API_BASE_URL = import.meta.env.VITE_API;
 
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:4000/api/quizzes/responder/${id}`,
+          `${API_BASE_URL}/quizzes/responder/${id}`,
           { withCredentials: true }
         );
         setQuiz(data);
@@ -44,7 +45,7 @@ const QuizResponder = () => {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:4000/api/quizzes/${id}/responder`,
+        `${API_BASE_URL}/quizzes/${id}/responder`,
         {
           respostas,
         },

@@ -6,7 +6,8 @@ import { RxBarChart, RxBookmark, RxBookmarkFilled, RxClock, RxPerson } from "rea
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const API_BASE_URL = "http://localhost:4000/api";
+const API_BASE_URL = import.meta.env.VITE_API;
+
 const MAX_DESCRIPTION_LENGTH = 120;
 
 const isValidDate = (date) => {

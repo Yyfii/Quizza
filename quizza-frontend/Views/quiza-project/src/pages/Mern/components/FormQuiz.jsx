@@ -17,7 +17,8 @@ const FormQuiz = () => {
 
   // Controlar respostas
   const [showAnswers, setShowAnswers] = useState(false);
-
+  const API_QG = import.meta.env.VITE_API_QG;
+   const API_BASE_URL = import.meta.env.VITE_API;
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -33,14 +34,13 @@ const FormQuiz = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/upload",
+        `${API_QG}/upload`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
           withCredentials: true,
         }
       );
-      console.log("🐛 Dados recebidos do backend:", response.data.questions);
 
       const questionsFromApi = response.data.questions;
 
@@ -217,7 +217,7 @@ const FormQuiz = () => {
                   onClick={async () => {
                     try {
                       const { data } = await axios.post(
-                        "http://localhost:4000/api/quizzes", // Removed "/save" from the endpoint
+                        `${API_BASE_URL}/quizzes`, // Removed "/save" from the endpoint
                         {
                           title,
                           questions,

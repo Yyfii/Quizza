@@ -6,6 +6,7 @@ import { assets } from "../../assets/navbar/assets";
 import { AppContext } from "./context/AppContext";
 
 const Login = () => {
+
   const navigate = useNavigate();
   const { backendUrl, setIsLoggedin, getUserData, setUserData } = useContext(AppContext);
 
