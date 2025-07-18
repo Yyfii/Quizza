@@ -98,6 +98,23 @@ python app.py
 
 ### 💻 4. Iniciar o Frontend (React)
 
+###### Configurar o .env do FrontEnd
+
+```
+- index.html
+- vite.config.js
+- README.md
+- .env # crie aqui
+```
+
+```
+VITE_BACKEND_URL=http://localhost:4000
+
+VITE_API=http://localhost:4000/api
+
+VITE_API_QG=http://localhost:5000
+```
+
 ```bash
 
 cd ../frontend/quizza-project

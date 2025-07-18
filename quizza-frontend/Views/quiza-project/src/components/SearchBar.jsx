@@ -4,7 +4,7 @@ import "./style/SearchBar.css";
 
 import { SearchResultsList } from "./SearchResultsList";
 
-const API_BASE_URL = "http://localhost:4000/api";
+const API_BASE_URL = import.meta.env.VITE_API;
 
 export const SearchBar = ({
   input,
@@ -28,7 +28,7 @@ export const SearchBar = ({
       );
       if (!res.ok) throw new Error("Busca falhou");
       const data = await res.json();
-      setResults(data);
+      setResults(data.data || []);
     } catch {
       setResults([]);
     }
@@ -78,6 +78,8 @@ export const SearchBar = ({
           selectedIndex={selectedIndex}
         />
       )}
+
+      {console.log("Resultados:", results)}
     </div>
   );
 };

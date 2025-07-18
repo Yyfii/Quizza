@@ -9,10 +9,8 @@ export const SearchResult = ({ result, setInput, setResults, isSelected }) => {
   const handleClick = () => {
     setInput(result.title);
     setResults([]);
-
-    setTimeout(() => {
-      navigate(`/quizzes/${result._id}`)
-    }, 3000)
+    navigate(`/quizzes/${result._id}`)
+    
   };
   return (
     <div

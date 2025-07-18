@@ -19,7 +19,8 @@ const isValidDate = (date) => {
 };
 
 const MAX_DESCRIPTION_LENGTH = 120;
-const API_BASE_URL = "http://localhost:4000/api";
+
+const API_BASE_URL = import.meta.env.VITE_API;
 
 const Simulados = () => {
   const navigate = useNavigate();
@@ -31,7 +32,6 @@ const Simulados = () => {
   const [favoriteLoading, setFavoriteLoading] = useState({});
   const [initialFavoritesLoading, setInitialFavoritesLoading] = useState(true);
   const userId = localStorage.getItem("userId");
-  console.log("userId: ", userId);
   const statsCache = useRef({});
 
   // Function to check user's favorites

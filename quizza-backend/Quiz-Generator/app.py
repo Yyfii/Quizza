@@ -1,4 +1,6 @@
 # código da API Flask
+import os
+from dotenv import load_dotenv, dotenv_values
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -11,8 +13,10 @@ from utils.generate_questions import gerar_questoes, parsear_questoes
 app = Flask(__name__)
 CORS(app)
 
+load_dotenv()
+
 # Permitir credenciais e origem específica
-CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
+CORS(app, supports_credentials=True, origins=[os.getenv("FRONTEND_URL")])
 
 nlp = spacy.load("pt_core_news_sm")
 

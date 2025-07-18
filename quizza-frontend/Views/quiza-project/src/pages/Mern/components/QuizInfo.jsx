@@ -27,7 +27,6 @@ const QuizInfo = () => {
         }
 
         setQuiz(quizData);
-        console.log("quiz state", quiz)
 
       } catch (error) {
         console.error("Error fetching quiz:", error);
