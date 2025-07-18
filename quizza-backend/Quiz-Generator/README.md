@@ -46,3 +46,8 @@ python app.py
 ```
 
 ## Não esqueça de iniciar os outros servidores (forntend e backend node)
+
+#### Executando com docker
+
+- docker build -t quiz-generator .
+- docker run -p 5000:5000 --env-file .env quiz-generator
