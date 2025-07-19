@@ -14,10 +14,12 @@ const port = process.env.PORT || 4000;
 // Conexão com o banco de dados
 connectDB();
 
+const frontendUrl = process.env.FRONTEND_URL;
+
 // Configurações de CORS
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', process.env.FRONTEND_URL],
+  origin: [frontendUrl],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -25,6 +27,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
 
 // Middlewares
 app.use(express.json());
