@@ -10,15 +10,25 @@ import spacy
 
 from utils.generate_questions import gerar_questoes, parsear_questoes
 
-app = Flask(__name__)
-CORS(app)
 
 load_dotenv()
 
+
+app = Flask(__name__)
+
+
+frontendUrl = os.getenv('FRONTEND_URL')
+
 # Permitir credenciais e origem específica
-CORS(app, supports_credentials=True, origins=[os.getenv("FRONTEND_URL")])
+# Corrija isso:
+CORS(app, supports_credentials=True, origins=[frontendUrl])
+
 
 nlp = spacy.load("pt_core_news_sm")
+
+@app.route('/')
+def home():
+    return "<h1>API Flask do Gerador de Simulados está funcionando!</h1>"
 
 @app.route('/upload', methods=['POST'])
 def upload_pdf():
@@ -28,7 +38,9 @@ def upload_pdf():
     level = request.form.get("level", "média")
     format = request.form.get("format", "múltipla-escolha")
 
-    file = request.files['file']
+    file = request.files.get('file')  # Use .get para evitar erro chave
+    if not file:
+        return jsonify({"error": "Nenhum arquivo enviado"}), 400
     pdf_bytes = file.read()
 
     # extract text
@@ -46,10 +58,10 @@ def upload_pdf():
         questoes_json = parsear_questoes(questoes_texto)
         return jsonify({"questions": questoes_json})
     except Exception as e:
+        print("Erro no endpoint /upload", e)
         return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    app.run(debug=True, host="0.0.0.0", port=5001)
 

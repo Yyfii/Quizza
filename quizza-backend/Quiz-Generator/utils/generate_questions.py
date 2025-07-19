@@ -7,6 +7,7 @@ import re
 
 load_dotenv('.env')
 key = os.getenv("OPEN_API_KEY")
+frontend = os.getenv('FRONTEND_URL')
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
