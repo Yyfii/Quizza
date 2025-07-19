@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m spacy download pt_core_news_sm
 
 # Define a porta exposta (se seu app usar, ex: Flask)
-EXPOSE 5000
+EXPOSE 5001
 
 # Comando para rodar a aplicação (ajuste se for diferente)
 CMD ["python", "app.py"]
